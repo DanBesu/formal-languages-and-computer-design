@@ -1,0 +1,82 @@
+-- p1 - input 3 numbers and compute the sum of only the even ones
+
+declarNumar a, b, c, suma
+
+suma = 0
+
+introdu a
+introdu b
+introdu c
+
+saZicemCa(a % 2 ?= 0){
+  suma = suma + a 
+}
+
+saZicemCa(b % 2 ?= 0){
+  suma = suma + b
+}
+
+saZicemCa(c % 2 ?= 0){
+  suma = suma + c
+}
+
+afiseaza suma
+
+
+-- p2 - display yes for each number divisible by 5 and no for each number that is not, (starting from 1)
+
+declarNumar x, index
+
+introdu x
+index = 1
+
+catTimp(index <= x){
+  saZicemCa(index % 5 ?= 0){
+    afiseaza "yes"
+  }
+  dacaNu{
+    afiseaza "no"
+  }
+}
+
+-- p3 - display the minimum of two numbers, if they are equal, display "equal"
+
+declarNumbar a, b 
+
+introdu a
+introdu b 
+
+saZicemCa(a < b){
+  afiseaza a 
+}
+dacaNu{
+  saZicemCa(a > b){
+    afiseaza b 
+  }
+  dacaNu{
+    afiseaza "equal"
+  }
+}
+
+-- p1err
+
+declarNumar a, b, c, suma
+
+suma = 11a00
+
+intrdu 3a
+introdu b
+introdu c
+
+saZicemCa(a % 2 ?= 0){
+  suma = suma + a 
+}
+
+saZicemCa(b % 2 ?= 0){
+  suma = suma + b
+}
+
+saZicemCa(c % 2 ?= 0){
+  suma = suma + c
+}
+
