@@ -1,0 +1,23 @@
+Identifiers: 
+
+  identifier::= leter|leter{leter}{digit}
+
+  leter::= "a" | "b" | ... | "z" | ... | "A" | "B" | ... | "Z"
+  digit::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+  not_zero_digit::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+  numerical_value = ["+" | "-"] digit | not_zero_digit {digit}
+  string_value = “ “ “(letter | digit) {letter | digit | “ ”} ” “ “
+  boolean_value = adevarat | fals
+
+Alphabet:
+
+  a. upper case letters (A-Z) and lower case letters (a - z) of the english Alphabet
+  b. decimal digits (0 - 9)
+
+Lexic: 
+
+  Special Symbols:
+    operators: + = - % ?= <= >= / * 
+    separators: " () {} [] space ;
+    reserved words: introdu afiseaza saZicemCa dacaNu catTimp cuvant declarNumar declarCuvant adevarat fals
+

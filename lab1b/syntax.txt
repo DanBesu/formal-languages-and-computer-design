@@ -1,0 +1,18 @@
+Syntax:
+
+  program ::= {statement}
+  statement ::= {decl_stmt | assign_stmt | if_stmt | while_stmt | out_stmt}"
+  decl_stmt ::= type identifier  (expression | const | arr_value) 
+  assign_stmt ::= identifier “=“ (expression | const | arr_value)
+  while_stmt ::= "catTimp" "(" condition ")" "{" "statement" "}"
+  out_stmt ::= “afiseaza” (identifier | const)
+  in_stmt ::= "introdu" (identifier | const)
+  if_stmt = "saZicemCa" condition statement {dacaNu condition statement} [dacaNu statement]
+
+  condition = expression | relation expression
+  relation = "<" | "<=" | "?=" | "!=" | ">=" | ">"
+  type := declarNumar | parere | declarCuvant
+  expression ::= expression "+" term | expression "-" term | term
+  term ::= term "*" factor | term "/" factor | factor
+  factor ::= "(" expression ")" | identifier | nr_value
+  const ::= str_value | nr_value | boolean_value
