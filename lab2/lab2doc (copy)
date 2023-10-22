@@ -1,0 +1,23 @@
+https://github.com/DanBesu/formal-languages-and-computer-design/tree/main/lab2
+
+Lab2 - Create SymbolTable Class
+
+The SymbolTable class uses the methods from the MyHashTable class to store add and find elements.
+
+SymbolTable Class methods:
+
+    constructor(): initiates a SymbolTable instance by creating a MyHashTable instance
+
+    add_item(key, value): adds an element in the hash table
+    
+    find_item(key): finds an element from the hash table
+
+MyHashTable Class
+    
+    constructor(): creates a new instance with the following fields: size, capacity, and items
+
+   _hash_func(key): given a given key, return its hash value
+
+    find_item(key): using the hash of the key, returns the value if found, and None if the item is not found
+
+    add_item(key, value): using the hash of the key, checks if the element exists, and adds it in the hash table
