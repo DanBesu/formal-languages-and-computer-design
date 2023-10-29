@@ -1,0 +1,9 @@
+declarNumar a, b
+
+introdu a
+introdu ~b
+
+saZicemCa (a < b) 
+    afiseaza a
+dacaNu
+    afiseaza 3b

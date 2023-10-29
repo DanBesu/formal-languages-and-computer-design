@@ -1,0 +1,16 @@
+declarNumbar a, b 
+
+introdu a
+introdu b 
+
+saZicemCa(a < b){
+  afiseaza a 
+}
+dacaNu{
+  saZicemCa(a > b){
+    afiseaza b 
+  }
+  dacaNu{
+    afiseaza "equal"
+  }
+}
