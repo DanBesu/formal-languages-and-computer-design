@@ -1,4 +1,4 @@
-declarNumbar a, b 
+declarNumar a, b 
 
 introdu a
 introdu b 

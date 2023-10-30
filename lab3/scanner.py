@@ -22,7 +22,7 @@ class ScannerUtilities(Enum):
 
     RESERVED_WORDS = ["declarNumar", "saZicemCa", "dacaNu", "catTimp", "introdu", "afiseaza", "declarCuvant"]
     SEPARATORS = ["\n", "\t", ":", " ", "(", ")", ",", "{", "}"]
-    OPERATORS = ["+", "-", "*", "/", "%", "=", "?=", "!=", "<", "<=", ">", ">=", "?", "&&", "||", "++", "--"]
+    OPERATORS = ["+", "-", "*", "/", "%", "=", "?=", "!=", "<", "<=", ">", ">=", "&&", "||", "++", "--"]
     
     NUMERIC_REGEX = "^0|[+|-]*[1-9]([0-9])*$"
     STRING_REGEX = "^\"[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]*\""
@@ -93,7 +93,7 @@ class Scanner:
         return token
 
     def __tokenize(self, line):
-        # Splits the given line into tokens
+        # splits the given line into tokens
         tokens = []
         i = 0
         while i < len(line):
@@ -103,7 +103,15 @@ class Scanner:
                 string_constant = self.__get_string_constant(line, i)
                 tokens.append(string_constant)
                 i = i + len(string_constant) - 1
-            elif line[i] == "!" or self.is_operator(line[i]):
+            elif line[i] == "?" or self.is_operator(line[i]):
+                operator = self.__get_operator(line, i)
+                tokens.append(operator)
+                i = i + len(operator) - 1
+            elif line[i] == "<" or self.is_operator(line[i]):
+                operator = self.__get_operator(line, i)
+                tokens.append(operator)
+                i = i + len(operator) - 1
+            elif line[i] == ">" or self.is_operator(line[i]):
                 operator = self.__get_operator(line, i)
                 tokens.append(operator)
                 i = i + len(operator) - 1
@@ -116,20 +124,19 @@ class Scanner:
 
     def __check_tokens_by_line(self, token, line_number):
         if self.is_reserved_word(token) or self.is_operator(token) or self.is_separator(token):
-            # verify if the token is: reserved word, operator or separator.
-            # if valid the value inserted in PIF will be of format [token, DEFAULT_INDEX]
+            # if RESERVED WORD, OPERATOR or SEPARATOR insert into PIF [token, DEFAULT_INDEX]
             self.__pif.append([token, ScannerUtilities.DEFAULT_INDEX.value])
         elif self.is_identifier(token) and not self.is_constant(token):
-            # check if the current token is an identifier.
-            # if not in the Symbol table already, add it and insert into PIF the pair [ID, position]
+            # if IDENTIFIER
+            # if not in the Symbol table, add it and insert into PIF the pair [ID, position]
             sym_table_position = self.__symbol_table.get_position(token)
             if (sym_table_position == ScannerUtilities.DEFAULT_INDEX.value):
                 self.__symbol_table.add_item(token, None)
                 sym_table_position = self.__symbol_table.get_position(token)
             self.__pif.append([ScannerUtilities.IDENTIFIER_CODE.value, sym_table_position])
         elif self.is_constant(token):
-            # check if the current token is a constant.
-            # if not in the Symbol table already, add it and insert into PIF the pair [CONSTANT, position]
+            # if CONSTANT
+            # if not in the Symbol table, add it and insert into PIF the pair [CONSTANT, position]
             sym_table_position = self.__symbol_table.get_position(token)
             if (sym_table_position == ScannerUtilities.DEFAULT_INDEX.value):
                 self.__symbol_table.add_item(token, None)
@@ -177,5 +184,5 @@ class Scanner:
         f.write(str(pit_text_format))
 
 scanner = Scanner()
-scanner.scan(ScannerConfigs.P2_FILE.value)
+scanner.scan(ScannerConfigs.PERR_FILE.value)
 scanner.print_tables()
