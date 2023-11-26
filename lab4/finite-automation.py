@@ -2,6 +2,7 @@ EMPTY_STRING = ""
 LINE_SEPARATOR = " "
 FILE_FINITE_AUTOMATON_1 = "lab4/fa.txt"
 FILE_FINITE_AUTOMATON_2 = "lab4/fa-constant.txt"
+FILE_FINITE_AUTOMATON_3 = "lab4/fa-identifier.txt"
 
 """
 states = [p, q, r]
@@ -110,7 +111,7 @@ class FiniteAutomaton:
 
     def start(self):
         print("Reading finite automaton from file...")
-        self.__read_finite_automaton_file(FILE_FINITE_AUTOMATON_2)
+        self.__read_finite_automaton_file(FILE_FINITE_AUTOMATON_3)
         print("Finished reading finite automaton.\n")
 
         is_deterministic = self.__check_if_finite_automaton_is_deterministic()
