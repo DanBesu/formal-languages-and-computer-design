@@ -1,0 +1,30 @@
+The FiniteAutomaton class is designed to verify whether a given finite automaton is deterministic and, if so, determine whether a specified sequence is accepted. It offers functionality for reading and parsing the finite automaton from an input file, as well as methods to showcase its components (alphabet, states, transitions) and to validate both the finite automaton and a user-selected sequence.
+
+Structure of the Finite Automaton Input File (fa.txt and fa-constant.txt):
+Line 1: All states of the finite automaton, separated by the LINE_SEPARATOR.
+Line 2: All alphabet elements, separated by the LINE_SEPARATOR.
+Line 3: The initial state.
+Line 4: All final states of the finite automaton, separated by the LINE_SEPARATOR.
+
+Line by Line: 
+Representation of the transition function: source, alphabet element, destination, separated by the LINE_SEPARATOR.
+
+FiniteAutomaton Class:
+
+Attributes:
+  - alphabet: Set containing the alphabet.
+  - states: Set containing the states of the program.
+  - initial_state: The initial state.
+  - transitions: Dictionary containing the transitions.
+Static Method:
+  - print_menu() -> void: Displays the menu.
+Public Methods:
+  - start() -> void: Initiates the program, allowing the user to choose an action based on a menu.
+
+Private Methods:
+  - read_finite_automaton_file(finite_automaton_filepath: string) -> void: Reads the finite automaton from an input file.
+  - check_if_finite_automaton_is_deterministic() -> bool: Checks whether the finite automaton is deterministic.
+  - check_if_sequence_is_accepted(sequence: string) -> bool: Checks whether the given sequence is accepted by the finite automaton.
+  - display_states(is_final_states: bool) -> void: Displays the set containing the states or only the final states based on the is_final_states parameter (default is False).
+  - display_alphabet() -> void: Displays the set containing the alphabet.
+  - display_transitions() -> void: Displays the transitions based on a transition representation: (p, a) -> q, where p, q are states, and a is an alphabet element.
