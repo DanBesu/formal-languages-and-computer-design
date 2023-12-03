@@ -1,0 +1,18 @@
+N = type, declaration, assignmentstmt, expression,term, factor, const, condition, relation, ifstmt, whilestmt, simplestatement, statement, statementlist, program
+E = declarNumar, declarCuvant, [, ], =, <=, >=, si, sau, startProgram, finalProgram, :, ;, :, +, *, /, -, (, ), saZicemCa, catTimp
+S = program
+type ->  declarNumar|declarCuvant
+declaration -> type identifier ;
+assignmentstmt -> identifier <- expression ;
+expression -> expression + term |expression - term|term
+term  ->  term*factor | term / factor |factor
+factor ->  ( expression )| identifier | const
+const -> intconst|stringconst
+condition -> (expression relation expression) | not ( expression   )
+relation ->  =|<>|>=|<=|si|sau
+ifstmt -> saZicemCa condition : statementlist |saZicemCa condition : statementlist else statementlist
+whilestmt -> catTimp condition : statementlist
+simplestatement -> declaration |assignmentstmt
+statement -> simplestatement|ifstmt|whilestmt|forstmt
+statementlist -> statement |statement statementlist
+program -> startProgram : statementlist  finalProgram
