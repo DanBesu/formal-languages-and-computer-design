@@ -1,0 +1,62 @@
+n 0
+[]
+['S']
+expand
+n 0
+[('S', 0)]
+['a', 'S', 'b', 'S']
+advance
+n 1
+[('S', 0), 'a']
+['S', 'b', 'S']
+expand
+n 1
+[('S', 0), 'a', ('S', 0)]
+['a', 'S', 'b', 'S', 'b', 'S']
+momentary insuccess
+b 1
+[('S', 0), 'a', ('S', 0)]
+['a', 'S', 'b', 'S', 'b', 'S']
+another try
+n 1
+[('S', 0), 'a', ('S', 1)]
+['c', 'b', 'S']
+advance
+n 2
+[('S', 0), 'a', ('S', 1), 'c']
+['b', 'S']
+advance
+n 3
+[('S', 0), 'a', ('S', 1), 'c', 'b']
+['S']
+expand
+n 3
+[('S', 0), 'a', ('S', 1), 'c', 'b', ('S', 0)]
+['a', 'S', 'b', 'S']
+momentary insuccess
+b 3
+[('S', 0), 'a', ('S', 1), 'c', 'b', ('S', 0)]
+['a', 'S', 'b', 'S']
+another try
+n 3
+[('S', 0), 'a', ('S', 1), 'c', 'b', ('S', 1)]
+['c']
+advance
+n 4
+[('S', 0), 'a', ('S', 1), 'c', 'b', ('S', 1), 'c']
+[]
+success!
+[('S', 0), 'a', ('S', 1), 'c', 'b', ('S', 1), 'c']
+
+ result:
+Successful sequence!
+
+ The Parsing Tree: 
+Index Information Parent Left Sibling
+0  S  -1  -1
+1  a  0  2
+2  S  -1  4
+3  c  2  -1
+4  b  -1  5
+5  S  -1  -1
+6  c  5  -1

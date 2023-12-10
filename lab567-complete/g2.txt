@@ -1,0 +1,23 @@
+program declaration_list statements declaration equal_expression var_type expression sign sign_and_expression term statement simple_stmt struct_stmt assignment_stmt input_output_stmt if_stmt else_stmt while_stmt condition relation
+; declarNumar declarCuvant = + - * / % introdu afiseaza ( ) { } " ' == != < > <= >= saZicemCa dacaNu catTimp identifier constant
+program
+program declaration_list statements
+declaration_list declaration declaration_list
+declaration var_type identifier equal_expression ;
+equal_expression = expression
+var_type declarNumar|declarCuvant
+expression term sign_and_expression
+sign_and_expression sign expression
+sign +|-|*|/|%
+term identifier|constant
+statements statement statements
+statement simple_stmt|struct_stmt
+simple_stmt assignment_stmt|input_output_stmt
+struct_stmt if_stmt|while_stmt
+assignment_stmt identifier=expression;
+input_output_stmt introdu(term);|afiseaza(term);
+if_stmt saZicemCa(condition){statements}else_stmt
+else_stmt dacaNu{statements}
+while_stmt catTimp(condition){statements}
+condition expression relation expression
+relation ==|!=|<|>|<=|>=
