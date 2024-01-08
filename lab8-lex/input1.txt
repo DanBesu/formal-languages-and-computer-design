@@ -1,0 +1,18 @@
+declarNumar a
+declarNumar b
+declarNumar c
+declarNumar suma
+suma = 0
+introdu a
+introdu b
+introdu c
+saZicemCa(a % 2 ?= 0){
+  suma = suma + a 
+}
+saZicemCa(b % 2 ?= 0){
+  suma = suma + b
+}
+saZicemCa(c % 2 ?= 0){
+  suma = suma + c
+}
+afiseaza suma

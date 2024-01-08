@@ -1,0 +1,26 @@
+Reserved word: declarNumar
+Identifier: x
+,Identifier: index
+Reserved word: introdu
+Identifier: x
+Identifier: index
+Operator: =
+Number: 1
+Identifier: catTimp
+Separator: (
+Identifier: index
+Operator: <=
+Identifier: x
+Separator: )
+Separator: {
+Reserved word: saZicemCa
+Separator: (
+Identifier: index
+Operator: %
+Number: 5
+Operator: ?=
+Number: 0
+Separator: )
+Separator: {
+Reserved word: afiseaza
+Illegal string constant at line 6

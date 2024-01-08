@@ -1,0 +1,12 @@
+declarNumar x
+declarNumar index
+introdu x
+index = 1
+catTimp(index <= x){
+  saZicemCa(index % 5 ?= 0){
+    afiseaza "yes"
+  }
+  dacaNu{
+    afiseaza "no"
+  }
+}

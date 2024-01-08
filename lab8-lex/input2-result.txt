@@ -1,0 +1,34 @@
+Reserved word: declarNumar
+Identifier: x
+Reserved word: declarNumar
+Identifier: index
+Reserved word: introdu
+Identifier: x
+Identifier: index
+Operator: =
+Number: 1
+Identifier: catTimp
+Separator: (
+Identifier: index
+Operator: <=
+Identifier: x
+Separator: )
+Separator: {
+Reserved word: saZicemCa
+Separator: (
+Identifier: index
+Operator: %
+Number: 5
+Operator: ?=
+Number: 0
+Separator: )
+Separator: {
+Reserved word: afiseaza
+String: "yes"
+Separator: }
+Reserved word: dacaNu
+Separator: {
+Reserved word: afiseaza
+String: "no"
+Separator: }
+Separator: }

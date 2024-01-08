@@ -1,0 +1,64 @@
+Reserved word: declarNumar
+Identifier: a
+Reserved word: declarNumar
+Identifier: b
+Reserved word: declarNumar
+Identifier: c
+Reserved word: declarNumar
+Identifier: suma
+Identifier: suma
+Operator: =
+Number: 0
+Reserved word: introdu
+Identifier: a
+Reserved word: introdu
+Identifier: b
+Reserved word: introdu
+Identifier: c
+Reserved word: saZicemCa
+Separator: (
+Identifier: a
+Operator: %
+Number: 2
+Operator: ?=
+Number: 0
+Separator: )
+Separator: {
+Identifier: suma
+Operator: =
+Identifier: suma
+Operator: +
+Identifier: a
+Separator: }
+Reserved word: saZicemCa
+Separator: (
+Identifier: b
+Operator: %
+Number: 2
+Operator: ?=
+Number: 0
+Separator: )
+Separator: {
+Identifier: suma
+Operator: =
+Identifier: suma
+Operator: +
+Identifier: b
+Separator: }
+Reserved word: saZicemCa
+Separator: (
+Identifier: c
+Operator: %
+Number: 2
+Operator: ?=
+Number: 0
+Separator: )
+Separator: {
+Identifier: suma
+Operator: =
+Identifier: suma
+Operator: +
+Identifier: c
+Separator: }
+Reserved word: afiseaza
+Identifier: suma
